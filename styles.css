@@ -12,6 +12,10 @@
     --bright: #f4f334;
     --font-primary: rgb(255, 255, 255);
 }
+img {
+    display: block;
+    max-width: 100%;
+}
 h2 {
     font-size: 2.5em;
 }
@@ -36,9 +40,8 @@ section {
     padding: 10vh 1.5em;
 }
 .button {
-    background-color: var(--main);
     color: var(--font-primary);
-    padding: 0.5em 1.5em;
+    padding: 1em 2em;
 }
 /*/////////HEADER////////*/
 #toggle {
@@ -89,16 +92,19 @@ section {
 /*/////////INTRO////////*/
 .intro {
     background-color: var(--main);
-    height: 80vh;
+    height: 90vh;
 }
 .intro__title {
     color: var(--font-primary);
-    line-height: 2.5em;
+    margin: 1em;
 }
 
 /*/////////DESCRIPTION////////*/
 .description {
     background-color: var(--second);
+}
+.description__article {
+    margin-top: 1.5em;
 }
 .description__paragraph {
     color: var(--font-primary);
@@ -109,4 +115,31 @@ section {
 /*/////////PHOTOS////////*/
 .photos {
     background-color: var(--bright);
+}
+.photos__title {
+    color: var(--second);
+}
+.photos__wrapper {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    margin: 3vh 0;
+}
+.photos__button {
+    background-color: var(--second);
+}
+
+/*/////////VIDEOS////////*/
+.videos {
+    background-color: var(--main);
+}
+.videos__title {
+    color: var(--font-primary);
+}
+.videos__container {
+    border: 1px dashed black;
+    margin: 3vh 0;
+}
+.videos__button {
+    background-color: var(--second);
 }
