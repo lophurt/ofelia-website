@@ -104,7 +104,11 @@ section {
 
 /*/////////DESCRIPTION////////*/
 .description {
-    background-color: var(--second);
+    background: rgba(0, 0, 0, 0.6) url(/ofelia-website/images/3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-blend-mode: darken;
 }
 .description__article {
     margin-top: 1.5em;
@@ -135,13 +139,17 @@ section {
 /*/////////VIDEOS////////*/
 .videos {
     background-color: var(--main);
+    padding: 10vh 0;
 }
 .videos__title {
     color: var(--font-primary);
 }
 .videos__container {
-    border: 1px dashed black;
     margin: 3vh 0;
+    max-width: 100%;
+}
+.videos__video {
+    max-width: 100%;
 }
 .videos__button {
     background-color: var(--second);
