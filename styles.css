@@ -59,6 +59,7 @@ section {
     position: fixed;
     top: 0%;
     width: 100%;
+    z-index: 1;
 }
 .header__container {
     display: flex;
@@ -173,4 +174,39 @@ section {
 /*/////////FAMILY////////*/
 .family {
     background-color: var(--bright);
+}
+
+/*/////////PHOTOS PAGE////////*/
+.body__photos {
+    background-color: var(--main);
+}
+.top {
+    padding-top: 10vh;
+}
+
+.top h2 {
+    text-align: center;
+    color: var(--font-primary);
+    margin: 1.5em 0;
+}
+
+.gallery {
+    column-count: 1;
+    column-gap: 0.5em;
+    padding: 0 0.5em;
+}
+
+.gallery__container {
+    display: inline-block;
+    overflow: hidden;
+}
+
+.gallery__container img {
+    width: 100%;
+    transition: 0.25s ease-in-out;
+}
+
+.gallery__container:hover img {
+    transform: scale(1.1);
+    z-index: -1;
 }
