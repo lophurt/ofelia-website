@@ -199,6 +199,7 @@ section {
 .gallery__container {
     display: inline-block;
     overflow: hidden;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
 }
 
 .gallery__container img {
@@ -209,4 +210,66 @@ section {
 .gallery__container:hover img {
     transform: scale(1.1);
     z-index: -1;
+}
+
+/*/////////VIDEOS PAGE////////*/
+.body__videos {
+    background-color: var(--main);
+}
+.youtube {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.youtube__container {
+    position: relative;
+    width: 100%;
+    max-width: 560px;
+    max-height: 315px;
+    overflow: hidden;
+    margin-bottom: 1em;
+}
+.youtube__container::after {
+    display: block;
+    content: "";
+    padding-top: 56.25%;
+  }
+.youtube__container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/*/////////STORY PAGE////////*/
+.body__story {
+    background-color: var(--main);
+}
+.story {
+    background: rgba(0, 0, 0, 0.6) url(/ofelia-website/images/3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-blend-mode: darken;
+}
+.story__article {
+    margin-top: 1.5em;
+}
+.story__paragraph {
+    color: var(--font-primary);
+    letter-spacing: 2px;
+    line-height: 1.3em;
+}
+
+/*/////////FAMILY PAGE////////*/
+.body__family {
+    background-color: var(--main);
+}
+
+.body__family img {
+    width: 95%;
+    max-width: 600px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    margin: auto;
 }
