@@ -8,13 +8,18 @@
   </head>
 
   <body>
-
     <header>
       <input type="checkbox" id="toggle" />
       <nav class="menu">
-        <a href="/ofelia-website/pages/videos.html" class="menu__item"><h4>Videos</h4></a>
-        <a href="/ofelia-website/pages/story.html" class="menu__item"><h4>Story</h4></a>
-        <a href="/ofelia-website/pages/photos.html" class="menu__item"><h4>Photos</h4></a>
+        <a href="/ofelia-website/pages/videos.html" class="menu__item"
+          ><h4>Videos</h4></a
+        >
+        <a href="/ofelia-website/pages/story.html" class="menu__item"
+          ><h4>Story</h4></a
+        >
+        <a href="/ofelia-website/pages/photos.html" class="menu__item"
+          ><h4>Photos</h4></a
+        >
         <a href="#" class="menu__item"><h4>Family</h4></a>
       </nav>
       <div class="header">
@@ -37,54 +42,70 @@
     <section class="description">
       <article class="description__article">
         <p class="description__paragraph">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-          Consequuntur, eos nam, molestiae in, eum voluptatem ut qui fugiat cum
-          dolorum autem unde culpa ipsam tempore. Nemo animi error consectetur
-          dolore.
+          Cuentan que hace mucho,mucho tiempo, en el reino subterráneo donde no
+          existe la mentira ni el dolor vivía una princesa que soñaba con el
+          mundo de los humanos. Soñaba con el cielo azul, la brisa suave y el
+          brillante sol. Un día, burlando toda vigilancia, la princesa escapó.
+          Una vez en el exterior la luz del sol la cegó y borró de su memoria
+          cualquier indicio del pasado.
         </p>
         <p class="description__paragraph">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum soluta
-          non error quas dolorum ipsa asperiores ipsam quaerat fugit, nesciunt,
-          maxime quam eum nisi aliquid distinctio natus voluptatibus saepe
-          reiciendis incidunt aspernatur, ut sit praesentium impedit! Ratione
-          iusto ipsa illo a? Minus aliquam earum incidunt magnam eum dolore
-          voluptatum maiores provident nesciunt accusantium numquam adipisci
-          nostrum quisquam quos quae voluptatem dolores at molestiae placeat,
-          vel ipsam tempore iste! Sequi, ullam.
-        </p>
-        <p class="description__paragraph">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
-          esse ab nisi. Eius, praesentium recusandae!
+          La princesa olvidó quien era, de dónde
+          venía. Su cuerpo sufrió frío, enfermedad, dolor y el correr de los
+          años y murió. Sin embargo, su padre el rey sabía que el alma de la
+          princesa regresaría...quizá en otro cuerpo, en otro tiempo, en otro
+          lugar... y él esperaría hasta su último aliento...hasta que el mundo
+          dejar de girar.
         </p>
       </article>
     </section>
 
     <section class="photos">
       <h3 class="photos__title">Photos</h3>
-      <div class="photos__wrapper">
-        <img class="photos__image" src="/ofelia-website/images/2.jpg">
-        <img class="photos__image" src="/ofelia-website/images/1.jpg">
-        <img class="photos__image" src="/ofelia-website/images/3.jpg">
+      <div class="container">
+        <input type="radio" name="images" id="i1" checked />
+        <input type="radio" name="images" id="i2" />
+        <input type="radio" name="images" id="i3" />
+        <div class="slide_image" id="one">
+          <img class="photos__image" src="/ofelia-website/images/H05.jpg" />
+          <label for="i3" class="pre"><</label>
+          <label for="i2" class="nxt">></label>
+        </div>
+        <div class="slide_image" id="two">
+          <img class="photos__image" src="/ofelia-website/images/H02.jpg" />
+          <label for="i1" class="pre"><</label>
+          <label for="i3" class="nxt">></label>
+        </div>
+        <div class="slide_image" id="three">
+          <img class="photos__image" src="/ofelia-website/images/H04.jpg" />
+          <label for="i2" class="pre"><</label>
+          <label for="i1" class="nxt">></label>
+        </div>
       </div>
       <a href="#" class="button photos__button"><p>more photos</p></a>
     </section>
-    
+
     <section class="videos">
       <h3 class="videos__title">Videos</h3>
       <div class="videos__container">
-        <video class="videos__video" src="/ofelia-website/videos/video01.mp4" controls loop></video>
+        <video
+          class="videos__video"
+          src="/ofelia-website/videos/video01.mp4"
+          controls
+          loop
+        ></video>
       </div>
       <a href="" class="button videos__button"><p>more videos</p></a>
     </section>
 
     <section class="story">
       <h3 class="story__title">Story</h3>
-        <p class="story__paragraph">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum debitis
-          hic delectus sed culpa. Distinctio, tenetur ratione qui nostrum
-          obcaecati molestiae nobis corrupti sequi quae impedit, blanditiis
-          inventore quidem fugiat.
-        </p>
+      <p class="story__paragraph">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum debitis
+        hic delectus sed culpa. Distinctio, tenetur ratione qui nostrum
+        obcaecati molestiae nobis corrupti sequi quae impedit, blanditiis
+        inventore quidem fugiat.
+      </p>
     </section>
 
     <section class="family">

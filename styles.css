@@ -9,8 +9,8 @@
     font-size: 16px;
 }
 :root {
-    --main: #ffe055;
-    --second: #e0225e;
+    --main: #2fd1dd;
+    --second: #2fabf3;
     --bright: #f4f334;
     --font-primary: rgb(255, 255, 255);
 }
@@ -29,11 +29,11 @@ h4 {
     font-size: 1.1em;
 }
 p {
-    font-size: 0.9em;
+    font-size: 0.8em;
     font-weight: 400;
 }
 p + p {
-    margin-top: 1em;
+    margin-top: 2em;
 }
 section {
     display: flex;
@@ -45,6 +45,8 @@ section {
 .button {
     color: var(--font-primary);
     padding: 1em 2em;
+    border-radius: 6px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
 }
 /*/////////HEADER////////*/
 #toggle {
@@ -59,7 +61,7 @@ section {
     position: fixed;
     top: 0%;
     width: 100%;
-    z-index: 1;
+    z-index: 10;
 }
 .header__container {
     display: flex;
@@ -67,26 +69,33 @@ section {
     align-items: center;
     width: 100%;
 }
+
 .header__icon label {
     color: var(--font-primary);
     cursor: pointer;
+    text-align: center;
 }
 .header__logo a {
     color: var(--font-primary);
 }
 .menu {
-    top: 60px;
+    top: 70px;
     position: fixed;
     display: none;
-    width: 100%;
+    width: 50%;
+    background-color: var(--second);
+    border-radius: 6px;
+    margin-left: 1em;
+    box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.3);
+    z-index: 10;
 }
 .menu__item {
-    background-color: var(--second);
     padding: 0.5em 1.5em;
     color: var(--font-primary);
 }
 .menu__item:hover {
-    background-color:#9e1641
+    background-color: var(--main);
+    border-radius: 6px;
 }
 #toggle:checked ~ .menu {
     display: flex;
@@ -96,6 +105,7 @@ section {
 /*/////////INTRO////////*/
 .intro {
     background-color: var(--main);
+    background-image: linear-gradient(var(--main), var(--second));
     height: 90vh;
 }
 .intro__title {
@@ -105,38 +115,89 @@ section {
 
 /*/////////DESCRIPTION////////*/
 .description {
-    background: rgba(0, 0, 0, 0.6) url(/ofelia-website/images/3.jpg);
+/*     background: rgba(125,32,181, 0.6) url(/ofelia-website/images/intro.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-blend-mode: darken;
+    background-blend-mode: darken; */
+    background-color: var(--second);
 }
 .description__article {
     margin-top: 1.5em;
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+    padding: 3em 1em;
 }
 .description__paragraph {
     color: var(--font-primary);
     letter-spacing: 2px;
-    line-height: 1.3em;
+    line-height: 2em;
+    text-align: center;
+    font-size: 0.7em;
 }
 
 /*/////////PHOTOS////////*/
 .photos {
-    background-color: var(--bright);
+    background-image: linear-gradient(var(--second), var(--main));
 }
 .photos__title {
-    color: var(--second);
+    color: var(--font-primary);
 }
-.photos__wrapper {
+.container {
+    margin: 40px auto;
+    position: relative;
+    width: 95%;
+    height: 0%;
+    padding-bottom: 75%;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+    z-index: 0;
+    border-radius: 6px;
+}
+.slide_image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.slide_image img {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    border-radius: 6px;
+}
+#i1, #i2, #i3 {
+    display: none;
+}
+.pre, .nxt {
+    width: 10vw;
+    height: 10vw;
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+    top: 40%;
+    background: white;
+    z-index: 2;
+    cursor: pointer;
     display: flex;
-    flex-direction: row;
-    overflow-x: scroll;
-    margin: 3vh 0;
+    justify-content: center;
+    align-items: center;
+    color: gray;
+    font-size: 1.5em;
+}
+.pre {
+    left: -5vw;
+}
+.nxt {
+    right: -5vw;
+}
+#i1:checked ~ #one,
+#i2:checked ~ #two,
+#i3:checked ~ #three {
+    z-index: 3;
 }
 .photos__button {
     background-color: var(--second);
 }
-
 /*/////////VIDEOS////////*/
 .videos {
     background-color: var(--main);
@@ -192,14 +253,15 @@ section {
 
 .gallery {
     column-count: 1;
-    column-gap: 0.5em;
-    padding: 0 0.5em;
+    padding: 0 1em;
 }
 
 .gallery__container {
     display: inline-block;
     overflow: hidden;
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+    border-radius: 6px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    margin-top: 1em;
 }
 
 .gallery__container img {
@@ -220,6 +282,7 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0 1em;
 }
 .youtube__container {
     position: relative;
@@ -227,7 +290,10 @@ section {
     max-width: 560px;
     max-height: 315px;
     overflow: hidden;
-    margin-bottom: 1em;
+    margin: 0.5em;
+    border-radius: 6px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    z-index: -1;
 }
 .youtube__container::after {
     display: block;
@@ -247,11 +313,11 @@ section {
     background-color: var(--main);
 }
 .story {
-    background: rgba(0, 0, 0, 0.6) url(/ofelia-website/images/3.jpg);
+    background: rgba(0, 0, 0, 0.9) url(/ofelia-website/images/3.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-blend-mode: darken;
+    background-blend-mode: normal;
 }
 .story__article {
     margin-top: 1.5em;
@@ -268,8 +334,9 @@ section {
 }
 
 .body__family img {
-    width: 95%;
+    width: 90%;
     max-width: 600px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
     margin: auto;
 }
